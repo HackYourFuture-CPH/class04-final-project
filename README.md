@@ -76,7 +76,10 @@ Check AMA Instagram here: [https://www.instagram.com/reboot.africa](https://www.
 ### Second iteration
 
 - Work on the data model and import it in MySQL
-  - Use Knex.js to create the data model and the migrations
+  - Set up Knex.js with your project. You need to be able to do the following:
+    - Write an initial migration that will set up all of the DB tables and fields in the supplied datamodel
+    - Write a seed script that will be able to "seed" the database with the data from the json file. Note that you need to split data from the json files into the relevant tables and set up associations between the data. This is not a trivial task.
+    - Make sure that you understand how to make any future changes on the database using up- and down-migrations.
   - [Optional] We found that using docker to start the MySQL instance simplifies it a bit (the ports format: external:internal external meaning exposed in localhost)
     - `docker run --rm -e MYSQL_ROOT_PASSWORD=password -d -p 3306:3306 mysql:8.0.11 --default-authentication-plugin=mysql_native_password`
 - Data structure
